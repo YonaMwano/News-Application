@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "functions": {
+    "app.py": {
+      "maxDuration": 30,
+      "memory": 1024,
+      "excludeFiles": "{.git/**,venv/**,.venv/**,__pycache__/**,*.pyc,.env*,README.md,tests/**}"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/app.py"
+    }
+  ]
+}
